@@ -12,9 +12,9 @@
 
 ## Introduction
 
-Codecom, is being developed to measure the execution times of JavaScript codes and to display the results both within the terminal and in an HTML file, allowing them to be viewed on a web page as well.
-
 The name, comes from the words "Code" and "Competition".
+
+Codecom is being developed using the Performance API to measure the execution time of JavaScript code and to display the results both within the terminal and in an HTML file, allowing them to be viewed in the browser as well.
 
 ## Motivation
 
@@ -34,10 +34,9 @@ Try it now!
 
 ## Features
 
-- leightweight [number]kb minified & gzipped
+- leightweight 8kb minified & gzipped
 - No dependencies
 - Easy to use
-- No need to adjust initial configurations
 - No magic, just simple use and effective.
 
 ## Installation
@@ -46,22 +45,18 @@ Try it now!
 npm install codecom
 ```
 
-Import the codecom library into your project's index file.
+Create a new file named `codecom.js` in the root directory of your project and copy the following code into it.
 
 ```JavaScript
 import codecom from 'codecom'
 ```
 
-#### or
-
-Create `codemon.js` file and import the codecom library into it.
-
 ## Usage
 
 To test code;
 
-- Add the // \_start() code to the beginning of where your code's scope start.
-- Add the // \_end() code to the end of where your code's scope end.
+- Add the `// _start()` code to the beginning of where your code's scope start.
+- Add the `// _end()` code to the end of where your code's scope end.
 
 #### Example
 
