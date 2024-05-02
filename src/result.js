@@ -6,10 +6,10 @@ const codeBlocks = findCodeBlocks(projectDirectory)
 
 codeBlocks.forEach((block, index) => {
   const codeReport = {
+    'execution-time': block.executionTime + ' ms',
     directory: block.filePath,
     'start-line': block.startLine,
     'end-line': block.endLine,
-    'execution-time': block.executionTime + ' ms',
   }
 
   console.table([codeReport])
@@ -23,7 +23,6 @@ let htmlContent = `
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codecom - test results</title>
-
   <style>
     .codeContainer {
       border: 1px solid #ccc;
@@ -52,10 +51,10 @@ let htmlContent = `
             <summary><b>code</b></summary>
             <pre class="codeBlock"><code>${block.code}</code></pre>
           </details>
+          <p><b>execution-time:</b> ${block.executionTime} ms</p>
           <p><b>directory:</b> ${block.filePath}</p>
           <p><b>start-line:</b> ${block.startLine}</p>
           <p><b>end-line:</b> ${block.endLine}</p>
-          <p><b>execution-time:</b> ${block.executionTime} ms</p>
         </div>
         `
     })
@@ -63,5 +62,6 @@ let htmlContent = `
 </body>
 </html>
 `
+fs.writeFileSync('codecom.html', htmlContent)
 
-fs.writeFileSync('test-codes.html', htmlContent)
+export default codeBlocks
