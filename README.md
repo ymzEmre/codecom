@@ -1,5 +1,9 @@
 # Codecom
 
+<!-- about for github shortly -->
+
+- A simple and effective tool for measuring the execution time of JavaScript code.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -34,7 +38,6 @@ Try it now!
 
 ## Features
 
-- leightweight 8kb minified & gzipped
 - No dependencies
 - Easy to use
 - No magic, just simple use and effective.
@@ -70,7 +73,7 @@ for (let i = 0; i < 100000; i++) {
 
 #### Run
 
-Add package.json file to your project and add the following code.
+Add the following code to the `package.json` file.
 
 ```JSON
 "scripts": {
