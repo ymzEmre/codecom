@@ -1,13 +1,23 @@
 {
   "name": "codecom",
-  "version": "0.0.6",
+  "description": "A simple and effective tool for measuring the execution time of JavaScript code.",
+  "version": "0.0.12",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
-  "keywords": [],
   "author": "ymzEmre",
+  "keywords": [
+    "performance",
+    "performance-visulization",
+    "performance-monitoring",
+    "performance-testing",
+    "performance-optimization"
+  ],
   "license": "MIT",
-  "description": "a"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymzEmre/codecom.git"
+  }
 }
