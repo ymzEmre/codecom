@@ -1,3 +1,3 @@
-require('./findCodeBlocks')
-require('./processCodeBlocks')
-require('./result')
+import result from './result.js'
+
+export default result

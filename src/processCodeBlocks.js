@@ -10,4 +10,4 @@ function processCodeBlocks(blockLines) {
   return { codeBlock, executionTime }
 }
 
-module.exports = processCodeBlocks
+export default processCodeBlocks

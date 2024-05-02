@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const processCodeBlocks = require('./processCodeBlocks')
+import fs from 'fs'
+import path from 'path'
+import processCodeBlocks from './processCodeBlocks.js'
 
 function findCodeBlocks(directoryPath) {
   const codeBlocks = []
@@ -60,4 +60,4 @@ function findCodeBlocks(directoryPath) {
   }
 }
 
-module.exports = findCodeBlocks
+export default findCodeBlocks
