@@ -24,7 +24,7 @@ function findCodeBlocks(directoryPath) {
         for (let i = 0; i < lines.length; i++) {
           const line = lines[i].trim()
 
-          if (line.startsWith('_start()')) {
+          if (line.startsWith('// _start()') || line.startsWith('//_start()')) {
             insideBlock = true
             blockStartLine = i + 2
           }
@@ -33,7 +33,7 @@ function findCodeBlocks(directoryPath) {
             blockLines.push(line)
           }
 
-          if (line.endsWith('_end()')) {
+          if (line.endsWith('// _end()') || line.endsWith('//_end()')) {
             insideBlock = false
             if (blockLines.length > 1) {
               const blockEndLine = i
