@@ -1,12 +1,12 @@
 {
   "name": "codecom",
-  "version": "0.0.2",
-  "description": "desc",
+  "version": "0.0.6",
   "main": "src/index.js",
   "scripts": {
-    "start": "node result.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "ymzEmre",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "a"
 }
