@@ -95,11 +95,11 @@ Results will be displayed in the terminal and in the `codecom.html` file.
 
 **Terminal result**
 
-![terminal](https://docs.google.com/uc?export=open&id=1gbaw-_zT1tSAYX0VET6r5NDDKDFQ1N2E)
+![terminal](https://docs.google.com/uc?export=open&id=1bxUeqFUVi4K_FAkU71DlRnC-PCug0JJV)
 
 **Browser result**
 
-![browser](https://docs.google.com/uc?export=open&id=1ypxZLQ3_vAfXLc_QSNBl-TfkROOC5ziS)
+![browser](https://docs.google.com/uc?export=open&id=176ENOURxd2yQyXjWdR6kjSmWEV6qKWxs)
 
 ## Contribution
 
