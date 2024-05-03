@@ -1,7 +1,8 @@
-const fs = require('fs')
-const findCodeBlocks = require('./findCodeBlocks')
+import fs from 'fs'
+import findCodeBlocks from './findCodeBlocks.js'
 
 const projectDirectory = 'src'
+const htmlFileName = 'codecom.html'
 const codeBlocks = findCodeBlocks(projectDirectory)
 
 codeBlocks.forEach((block, index) => {
@@ -15,7 +16,43 @@ codeBlocks.forEach((block, index) => {
   console.table([codeReport])
 })
 
-let htmlContent = `
+const generateCodeBlocksHTML = (codeBlocks) => {
+  return codeBlocks.map((block, index) => {
+    return `
+      <div class="codeContainer">
+        <p><b>index</b>: ${index}</p>
+        <details>
+          <summary><b>code</b></summary>
+          <pre class="codeBlock"><code>${block.code}</code></pre>
+        </details>
+        <p><b>execution-time:</b> ${block.executionTime} ms</p>
+        <p><b>directory:</b> ${block.filePath}</p>
+        <p><b>start-line:</b> ${block.startLine}</p>
+        <p><b>end-line:</b> ${block.endLine}</p>
+      </div>`;
+  }).join(' ');
+}
+
+const styleContent = `
+<style>
+  .codeContainer {
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+  .codeBlock {
+    display: block;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-left: 3px solid #ccc;
+    margin: 1rem 0;
+    overflow-x: auto;
+    font-family: monospace;
+  }
+</style>
+`;
+
+const htmlContent = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,45 +60,16 @@ let htmlContent = `
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codecom - test results</title>
-  <style>
-    .codeContainer {
-      border: 1px solid #ccc;
-      padding: 0 1rem;
-      margin: 1rem 0;
-    }
-    .codeBlock {
-      display: block;
-      padding: 1rem;
-      background-color: #f4f4f4;
-      border-left: 3px solid #ccc;
-      margin: 1rem 0;
-      overflow-x: auto;
-      font-family: monospace;
-    }
-  </style>
+  ${styleContent}
 </head>
 <body>
   <h3>Codecom - test results</h3>
-  ${codeBlocks
-    .map((block, index) => {
-      return `
-        <div class="codeContainer">
-          <p><b>index</b>: ${index}</p>
-          <details>
-            <summary><b>code</b></summary>
-            <pre class="codeBlock"><code>${block.code}</code></pre>
-          </details>
-          <p><b>execution-time:</b> ${block.executionTime} ms</p>
-          <p><b>directory:</b> ${block.filePath}</p>
-          <p><b>start-line:</b> ${block.startLine}</p>
-          <p><b>end-line:</b> ${block.endLine}</p>
-        </div>
-        `
-    })
-    .join(' ')}
+  ${generateCodeBlocksHTML(codeBlocks)}
 </body>
 </html>
-`
-fs.writeFileSync('codecom.html', htmlContent)
+`;
+
+
+fs.writeFileSync(htmlFileName, htmlContent)
 
 export default codeBlocks
