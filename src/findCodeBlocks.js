@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import processCodeBlocks from './processCodeBlocks.js'
 
-function findCodeBlocks(directoryPath) {
+const findCodeBlocks = (directoryPath) => {
   const codeBlocks = []
 
   try {
