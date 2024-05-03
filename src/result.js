@@ -1,5 +1,6 @@
 import fs from 'fs'
 import findCodeBlocks from './findCodeBlocks.js'
+import { exec } from 'child_process'
 
 const projectDirectory = 'src'
 const htmlFileName = 'codecom.html'
@@ -71,5 +72,16 @@ const htmlContent = `
 
 
 fs.writeFileSync(htmlFileName, htmlContent)
+
+const openHTMLFile = (fileName) => {
+  const openCommand = process.platform === 'win32' ? 'start' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+  exec(`${openCommand} ${fileName}`);
+}
+
+const eventName = process.env.npm_lifecycle_event;
+
+if (eventName.includes('open')) {
+  openHTMLFile(htmlFileName);
+}
 
 export default codeBlocks
