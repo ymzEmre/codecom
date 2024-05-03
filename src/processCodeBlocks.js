@@ -1,4 +1,4 @@
-function processCodeBlocks(blockLines) {
+const processCodeBlocks = (blockLines) => {
   const startTime = performance.now()
 
   const codeBlock = blockLines.slice(1, -1).join('\n')
