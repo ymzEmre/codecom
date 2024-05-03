@@ -1,9 +1,5 @@
 # Codecom
 
-<!-- about for github shortly -->
-
-- A simple and effective tool for measuring the execution time of JavaScript code.
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -24,10 +20,10 @@ Codecom is being developed using the Performance API to measure the execution ti
 
 When developing a software, usually, attention is not paid to the milisecond-level execution time of the code. However, in some cases;
 
-- When the application will run on a device with limited resources,
-- When evaluating and improving the performance of the code,
-- When processing big data, deciding on the optimal solution method,
-- When comparing the performance of different codes,
+- When the application will run on a device with limited resources.
+- When evaluating and improving the performance of the code.
+- When processing big data, deciding on the optimal solution method.
+- When comparing the performance of different codes.
 - When seeking to enhance the user experience by reducing the waiting time of the user.
 
 In such cases, it is necessary to measure the execution time of the code and to compare the results.
@@ -48,7 +44,7 @@ Try it now!
 npm install codecom
 ```
 
-Create a new file named `codecom.js` in the root directory of your project and copy the following code into it.
+Create a new file named `codecom.mjs` in the root directory of your project and copy the following code into it.
 
 ```JavaScript
 import codecom from 'codecom'
@@ -77,7 +73,7 @@ Add the following code to the `package.json` file.
 
 ```JSON
 "scripts": {
-  "codecom": "node --watch codecom.js"
+  "codecom": "node --watch codecom.mjs"
 }
 ```
 
@@ -85,6 +81,23 @@ Run the following command in the terminal.
 
 ```bash
 npm run codecom
+```
+
+**Note:**
+
+- Automatically, the `codecom.html` file will be created in the root directory of your project.
+- If you want to open automatically the `codecom.html` file in the browser, you can add the following code to the `package.json` file.
+
+```JSON
+"scripts": {
+  "codecom:open": "node --watch codecom.mjs"
+}
+```
+
+and run following command
+
+```bash
+npm run codecom:open
 ```
 
 #### Output
