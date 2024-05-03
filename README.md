@@ -28,7 +28,7 @@ When developing a software, usually, attention is not paid to the milisecond-lev
 
 In such cases, it is necessary to measure the execution time of the code and to compare the results.
 
-Codecom, is developed to make this process easier and more enjoyable.
+Codecom, is being developed to make this process easier and more enjoyable
 
 Try it now!
 
