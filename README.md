@@ -44,7 +44,7 @@ Try it now!
 npm install codecom
 ```
 
-Create a new file named `codecom.mjs` in the root directory of your project and copy the following code into it.
+Create a new file named `codecom.mjs` in the root directory of your project and add the following code into it.
 
 ```JavaScript
 import codecom from 'codecom'
@@ -52,7 +52,7 @@ import codecom from 'codecom'
 
 ## Usage
 
-To test code;
+To test code,
 
 - Add the `// _start()` code to the beginning of where your code's scope start.
 - Add the `// _end()` code to the end of where your code's scope end.
@@ -69,12 +69,10 @@ for (let i = 0; i < 100000; i++) {
 
 #### Run
 
-Add the following code to the `package.json` file.
+Add the following code to the script object in the `package.json` file
 
 ```JSON
-"scripts": {
-  "codecom": "node --watch codecom.mjs"
-}
+"codecom": "node --watch codecom.mjs"
 ```
 
 Run the following command in the terminal.
@@ -89,12 +87,10 @@ npm run codecom
 - If you want to open automatically the `codecom.html` file in the browser, you can add the following code to the `package.json` file.
 
 ```JSON
-"scripts": {
-  "codecom:open": "node --watch codecom.mjs"
-}
+"codecom:open": "node --watch codecom.mjs"
 ```
 
-and run following command
+and run following command.
 
 ```bash
 npm run codecom:open
