@@ -69,7 +69,7 @@ for (let i = 0; i < 100000; i++) {
 
 #### Run
 
-Add the following code to the script object in the `package.json` file
+Add the following code to the script object in the `package.json` file.
 
 ```JSON
 "codecom": "node --watch codecom.mjs"
@@ -84,7 +84,7 @@ npm run codecom
 **Note:**
 
 - Automatically, the `codecom.html` file will be created in the root directory of your project.
-- If you want to open automatically the `codecom.html` file in the browser, you can add the following code to the `package.json` file.
+- If you want to open automatically the `codecom.html` file in the browser, you can add the following code to the script object in the `package.json` file.
 
 ```JSON
 "codecom:open": "node --watch codecom.mjs"
