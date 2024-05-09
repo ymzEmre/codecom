@@ -28,7 +28,7 @@ When developing a software, usually, attention is not paid to the milisecond-lev
 
 In such cases, it is necessary to measure the execution time of the code and to compare the results.
 
-Codecom, is being developed to make this process easier and more enjoyable
+Codecom, is being developed to make this process easier and more enjoyable.
 
 Try it now!
 
@@ -36,7 +36,8 @@ Try it now!
 
 - No dependencies
 - Easy to use
-- No magic, just simple use and effective.
+- No magic
+- Just simple use and effective
 
 ## Installation
 
@@ -81,9 +82,12 @@ Run the following command in the terminal.
 npm run codecom
 ```
 
-**Note:**
+**Note**
 
-- Automatically, the `codecom.html` file will be created in the root directory of your project.
+- Automatically the `codecom.html` file will be created in the root directory of your project.
+
+**Tip**
+
 - If you want to open automatically the `codecom.html` file in the browser, you can add the following code to the script object in the `package.json` file.
 
 ```JSON
